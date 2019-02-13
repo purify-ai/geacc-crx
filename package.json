@@ -1,0 +1,40 @@
+{
+  "name": "purify-geacc-crx",
+  "version": "0.1.0",
+  "description": "Classifies all images on the page as safe/unsafe for General Audiences using Purify.ai Geacc model.",
+  "keywords": [
+    "tensorflow",
+    "tf",
+    "tensor",
+    "machine learning",
+    "ml",
+    "ai",
+    "neural networks",
+    "neuralnetworks",
+    "deeplearning",
+    "model",
+    "image recognition",
+    "chrome extension",
+    "chrome",
+    "google"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "prebuild-dev": "rm -rf dist",
+    "build": "parcel build manifest.json",
+    "build-dev": "NODE_ENV=development parcel build manifest.json --no-minify",
+    "watch": "parcel watch manifest.json --hmr-hostname localhost"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "clang-format": "^1.2.3",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-web-extension": "^1.5.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.15.1"
+  }
+}

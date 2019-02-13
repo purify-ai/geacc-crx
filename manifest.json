@@ -1,0 +1,45 @@
+{
+  "name": "General Audiences Content Classifier",
+  "version": "0.1",
+  "description": "Classifies images on the page as safe/unsafe for General Audiences using Purify.ai Geacc model.",
+  "homepage_url": "https://github.com/purify-ai/geacc-crx",
+  "author": "Purify Foundation",
+  "minimum_chrome_version": "31",
+  "manifest_version": 2,
+  "permissions": [
+    "*://*/*",
+    "contextMenus",
+    "notifications",
+    "activeTab",
+    "downloads",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "/images/icon_48.png",
+    "default_title": "Geacc",
+	  "default_popup": "/src/popup.html"
+  },
+  "icons": {
+    "16": "/images/icon_16.png",
+    "48": "/images/icon_48.png",
+    "128": "/images/icon_128.png"
+  },
+  "background": {
+    "scripts": ["/src/background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["/src/content.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

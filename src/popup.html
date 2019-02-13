@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <script src="popup.js" defer></script>
+  <style>
+    /* Override Milligram CSS */
+    body {
+      min-width: 300px;
+      margin: 10px 0;
+    }
+    @media (min-width: 17rem) {
+      .row {
+        flex-direction: row;
+        margin-left: -1.0rem;
+        width: calc(100% + 2.0rem);
+      }
+      .row .column {
+        margin-bottom: inherit;
+        padding: 0 1.0rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="info">
+        <p>All images are automatically analysed using <b><a href="http://www.purify.ai" target="_blank">Purify.ai
+              Geacc</a></b> model. Assuming that only safe content is browsed, any images predicted as unsafe (false
+          positive) are being logged.</p>
+        <p>You can copy or cleanup the collected list of false positive URLs:</p>
+      </div>
+    </div>
+    <div class="row row-center">
+      <div class="column column-25">
+        <button id="copy-urls" class="button button-small">Copy</button>
+      </div>
+      <div class="column column-25">
+        <button id="clean-urls" class="button button-small button-outline">Cleanup</button>
+      </div>
+    </div>
+    <div class="row">
+      <div id="status"></div>
+    </div>
+  </div>
+</body>
+
+</html>
