@@ -2,7 +2,7 @@
 
 This Google Chrome extension uses Geacc pretrained model (MobileNetV2) and TensorFlow.js to detect and block explicit images. All inference performed in browser.
 
-Extension downloads the model on start and performs classification on a device. Once initialised, it blurs explicit images and automatically adds badge overlay containing prediction results to images on hover.
+Extension downloads the model on start. Once initialised, it blurs explicit images and automatically adds badge overlay containing prediction results to images on hover.
 
 All images larger than 119px analysed. However, badges only displayed if the image loaded through `<img>` tag. Sometimes it fails to add badge when there is some fancy js manipulation used on the page, or image loaded through data URI or CSS background style.
 
@@ -15,6 +15,9 @@ npm i
 npm run build
 ```
 
+This command generates a `dist/` folder which contains the build artifacts.
+
+To load the extension to Google Chrome:
 - Open Google Chrome "Extensions" page
 - Enable developer mode
 - Click [LOAD UNPACKED] button
@@ -28,6 +31,8 @@ When building for development and troubleshooting purposes, use the following co
 ```sh
 npm run build-dev
 ```
+
+It disables uglify and minify steps so you can see readable code.
 
 ## Examples
 
