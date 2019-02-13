@@ -16,7 +16,7 @@ const getVisible = {
 const overlayStyle = {
 	string: {
 		"benign": "Safe",
-		"malign": "Unsafe"
+		"malign": "Explicit"
 	},
 	style: [
 		// base rules for all Save buttons

@@ -1,7 +1,7 @@
 {
-  "name": "General Audiences Content Classifier",
+  "name": "Geacc Chrome Extension",
   "version": "0.1",
-  "description": "Classifies images on the page as safe/unsafe for General Audiences using Purify.ai Geacc model.",
+  "description": "Detect explicit images on the page using Purify.ai Geacc pretrained model and TensorFlow.js.",
   "homepage_url": "https://github.com/purify-ai/geacc-crx",
   "author": "Purify Foundation",
   "minimum_chrome_version": "31",

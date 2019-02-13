@@ -143,7 +143,7 @@ class BackgroundProcessing {
 			}
 
 			if (meta.predictions) {
-
+				// Collect false positives
 				if (meta.predictions[0].className === "malign") {
 					this.falsePositiveURLs.push(meta.url);
 				}
