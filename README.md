@@ -1,6 +1,6 @@
 # Geacc Chrome Extension
 
-This Google Chrome extension uses Geacc pretrained model (MobileNetV2) and TensorFlow.js to detect and block explicit images. All inference performed in browser.
+This Google Chrome extension uses [Geacc pre-trained model](https://github.com/purify-ai/geacc-models/) (MobileNetV2) and TensorFlow.js to detect and block explicit images. All inference performed in browser.
 
 Extension downloads the model on start. Once initialised, it blurs explicit images and automatically adds badge overlay containing prediction results to images on hover.
 
