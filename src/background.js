@@ -46,7 +46,7 @@ class BackgroundProcessing {
 	async loadModel() {
 		console.log('Loading model...');
 		const startTime = performance.now();
-		this.model = await tf.loadModel(MOBILENET_MODEL_PATH);
+		this.model = await tf.loadLayersModel(MOBILENET_MODEL_PATH);
 		this.model.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
 
 		const totalTime = Math.floor(performance.now() - startTime);
